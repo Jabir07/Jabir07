@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAM loves JIM</title>
+
+    <style>
+        
+        .container {
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 60%;
+            padding: 20px;
+            display: none;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+        
+    </style>
+    <H6>GELC Vradarrrrrr</H6>
+    <h5>tomago aska porikkha</h5>
+    <h4>Google Mama nai ajke</h4>
+</head>
+<body>
+<div class="container">
+    Q1. Who is the moderator of GELC?<hr>
+    <input type="radio" name="question1">Jonibai<br>
+    <input type="radio" name="question1">Jonybai<br>
+    <input type="radio" name="question1" id="correct1">Jony Sir<br>
+    <input type="radio" name="question1">JonS<br>
+    <button class="next" onclick="next(1)">NEXT</button>
+</div>
+<div class="container">
+    Q2. Who is the GS of GELC?<hr>
+    <input type="radio" name="question2">Bhut<br>
+    <input type="radio" name="question2">Murgi<br>
+    <input type="radio" name="question2" id="correct2">Baccha Haati<br>
+    <input type="radio" name="question2">Hippo<br>
+    <button class="next" onclick="next(2)">NEXT</button>
+</div>
+<div class="container">
+    Q3. Who is the lover of Pam?<hr>
+    <input type="radio" name="question3" id="correct3">Jim<br>
+    <input type="radio" name="question3">Rick<br>
+    <input type="radio" name="question3">Michael<br>
+    <input type="radio" name="question3">Dwight<br>
+    <button class="next" onclick="next(3)">NEXT</button>
+</div>
+<div class="container">
+    Q4. Who is the most dedicated from GELC?<hr>
+    <input type="radio" name="question4" id="correct4">Gorur Baccha<br>
+    <input type="radio" name="question4">Bhut<br>
+    <input type="radio" name="question4">Haati<br>
+    <input type="radio" name="question4">Gadha<br>
+    <button onclick="result()">SUBMIT QUIZ</button>
+</div>
+    <script>
+    // displaying the first block of question
+    document.getElementsByClassName('container')[0].style.display = "block";
+
+    // DEFINING THE NEXT FUNCTION
+    function next(id) {
+        document.getElementsByClassName('container')[id-1].style.display = "none";
+        document.getElementsByClassName('container')[id].style.display = "block";
+    }
+    //getting final result
+    function result() {
+        var score = 0;
+        if (document.getElementById('correct1').checked) {
+            score++;
+        }
+        if (document.getElementById('correct2').checked) {
+            score++;
+        }
+        if (document.getElementById('correct3').checked) {
+            score++;
+        }
+        if (document.getElementById('correct4').checked) {
+            score++;
+        }
+        alert("your score is: "+ score);
+    }
+    </script>
+</body>
+</html>
+
